@@ -79,6 +79,11 @@ public class productoControlador {
 		 
 	}
 	
+	@GetMapping("/login") //ruta de formulario para la autenticacion
+	public String loginPage() {
+		return "login";
+	}
+	
 	
 	
 }
