@@ -18,6 +18,7 @@ public class Configuracion {
 	        .authorizeHttpRequests((requests) -> requests
 	            .requestMatchers("/productos/listar").authenticated() // Requiere autenticación para listar
 	            .requestMatchers("/productos/agregar").authenticated() // Requiere autenticación para agregar
+	            .requestMatchers("/productos/agregarProductos").authenticated() 
 	            .requestMatchers("/productos/**").permitAll() // Permite acceso a otras rutas bajo /productos sin autenticación
 	            .anyRequest().permitAll() // Permite acceso a todas las demás rutas sin autenticación
 	        )

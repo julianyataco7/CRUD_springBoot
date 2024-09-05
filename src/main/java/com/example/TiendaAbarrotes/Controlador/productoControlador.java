@@ -24,7 +24,7 @@ public class productoControlador {
 	@Autowired
 	private productoServicio servicio;
 	
-	@GetMapping("/listar") //// muestra la vista con una lista de los productos
+	@GetMapping("/listar") 
 	public String mostrarListaProductos(Model modelo) {
 		modelo.addAttribute ("listaProductos",servicio.listarProductos());
 		return "Lista-Productos";
@@ -79,7 +79,7 @@ public class productoControlador {
 		 
 	}
 	
-	@GetMapping("/login") //ruta de formulario para la autenticacion
+	@GetMapping("/login") 
 	public String loginPage() {
 		return "login";
 	}
